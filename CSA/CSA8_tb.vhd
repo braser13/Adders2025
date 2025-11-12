@@ -1,29 +1,4 @@
---Testbench Carry Save Adder 8 bits    
---**********************************************************************************************************************
---Carry Save Adder 8 bits
---Authors:
---  Andres Gonzalo Hernandez Ortega
---  Braian Steven Avella Rivera
---Year: 2022
---Maestría en Ingeniería
---Universidad Pedagogica y Tecnologica de Colombia
---
---TOP LEVEL
---
---Inputs:
---    X (required), Y (required), Carry_in(required)
---    *** Warning: X and Y Inputs should be in 8 Bit format, and Carry_in Input should be in 1 bit format ***
---Outputs:
---    sum (result), Coarry(carry result)
---    *** Warning: The S results will be given 8 bit format, and Coarry Input should be in 1 bit format ***
---
---Description:
---This algorithm add two numbers of 8-bit
---This implementation uses Ripple Carry Algorithm
-
-
---**********************************************************************************************************************
-
+--Testbench CSA 8 bits    
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -38,8 +13,8 @@ signal sA, sB, sCi : std_logic_vector(7 downto 0);
 signal  sS, sCo : std_logic_vector(8 downto 0);
 
 begin
-	DUT: entity work.carry_save_adder port map
-	(x=>sA,y=>sB,carry_in=>sCi,Sum=>sS,carry=>sCo);
+	DUT: entity work.CSA8 port map
+	(A=>sA,B=>sB,Ci=>sCi,S=>sS,Co=>sCo);
 	TB2: process
 	begin
 		sCi <= "00000000";
