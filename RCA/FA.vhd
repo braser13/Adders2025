@@ -1,24 +1,24 @@
 --**********************************************************************************************************************
 --Full Adder
 --Authors:
---  Andres Gonzalo Hernandez Ortega
 --  Braian Steven Avella Rivera
---Year: 2022
+--  Andres Gonzalo Hernandez Ortega
+--Year: 2025
 --Maestría en Ingeniería
---Universidad Pedagógica y Tecnológica de Colombia
+--Universidad Pedagogica y Tecnologica de Colombia
 --
 --TOP LEVEL
 --
 --Inputs:
---    X (required), Y (required), Ci (required)
---    *** Warning: Inputs should be in 1 Bit format ***
+--    X (required), X (required), Ci(required)
+--    *** Warning: X, Y  and Ci Input should be in 1 bit format ***
 --Outputs:
---    F (result), Co (result)
---    *** Warning: The results will be given 1 bit format ***
+--    F (result), Co(carry result)
+--    *** Warning: The F, and Co results will be given 1 bit format ***
 --
 --Description:
---This algorithm sum two numbers of 1-bit
---This implementation uses Full Adder
+--This algorithm add two numbers of 1-bit
+--This implementation uses Full Adder circuit.
 
 
 --**********************************************************************************************************************
@@ -30,6 +30,8 @@
 --     Ci->| ADDER |->Co        
 --         |_______|        
 --
+
+--**********************************************************************************************************************
 library  ieee;
 use ieee.std_logic_1164.all;
 

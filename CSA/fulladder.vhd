@@ -1,34 +1,35 @@
 --**********************************************************************************************************************
---Carry Lookhead Adder de 64 bits
+--Full Adder
 --Authors:
---  Andres Gonzalo Hernandez Ortega
 --  Braian Steven Avella Rivera
---Year: 2022
+--  Andres Gonzalo Hernandez Ortega
+--Year: 2025
 --Maestría en Ingeniería
 --Universidad Pedagogica y Tecnologica de Colombia
 --
 --TOP LEVEL
 --
 --Inputs:
---    X (required), Y (required), Ci(required)
---    *** Warning: X and B and Cin Input should be in 1 bit format ***
+--    a (required), b (required), cin(required)
+--    *** Warning: a, b  and cin Input should be in 1 bit format ***
 --Outputs:
---    F (result), Co(carry result)
---    *** Warning: The F and Cout results should be in 1 bit format ***
+--    sum (result), carry(carry result)
+--    *** Warning: The sum, and carry results will be given 1 bit format ***
 --
 --Description:
 --This algorithm add two numbers of 1-bit
---This implementation uses Full Adder
+--This implementation uses Modifie Full Adder circuit.
 
 
 --**********************************************************************************************************************
 
 -- 		Full Adder
---          _______
---      X->|       |
---      Y->| FULL  |->F
---     Ci->| ADDER |->Co        
---         |_______|        
+--           _______
+--       a->|       |
+--       b->| FULL  |->sum
+--     cin->| ADDER |->carry        
+--          |_______|        
+--
 
 --**********************************************************************************************************************
 library  ieee;
